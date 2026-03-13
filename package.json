@@ -9,7 +9,9 @@
     "postinstall": "node scripts/patch-electron-name.mjs",
     "build:icons": "node scripts/build-icons.mjs",
     "build": "npm run build:icons && tsc && vite build && electron-builder",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "node tools/deploy.mjs",
+    "deploy:bump": "node tools/deploy.mjs --bump"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
